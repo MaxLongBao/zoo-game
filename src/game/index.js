@@ -8,15 +8,6 @@ const Game = (props) => {
   const [newCards, setNewCards] = useState(cards);
   const [cardSelected, setCardSelected] = useState({id: null, key: null});
 
-  // const handleClick = (id) => {
-  //   console.log(id);
-  //   const other = newCards.filter(card => (
-  //     card.id !== id)
-  //   )
-  //   setNewCards(other);
-  //   console.log(newCards);
-  // }
-
   const handleClick = (id, key) => {
     if (cardSelected.id !== null) {
       if (id === cardSelected.id && key !== cardSelected.key) {

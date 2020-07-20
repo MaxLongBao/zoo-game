@@ -1,17 +1,33 @@
 img {
-    height: 100px;
-    width: 150px;
-    /* visibility: hidden; */
+    height: 90px;
+    width: 110px;
 }
 
 .card-container {
+    width: 500px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+    /* background-color: #33a6e4; */
+    /* background-color: #ffffff; */
 }
-/* 
+
 .card {
-    background: url('../images/card_back.png');
-} */
+    /* background: url('../images/card_back.png'); */
+    margin: 5px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    padding: 2px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.card-name {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Indie Flower', cursive;
+}
 
 .hide-cards {
     visibility: hidden;

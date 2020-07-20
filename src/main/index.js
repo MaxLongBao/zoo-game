@@ -3,6 +3,8 @@ import { useQuery, gql } from '@apollo/client';
 import shuffleArray from '../helpers'
 import Game from '../game';
 
+import './main.css'
+
 const API = gql`
   {
     topAnimals {
@@ -30,14 +32,12 @@ const Main = () => {
   
   const selectedAnimals = animalArray.slice(0,8);
   const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
-  // animalArrayDuplicated.forEach((item) => (
-    //   animalArrayDuplicated.push(item)
-    // ))
+
   shuffleArray(duplicateAnimalsArray);
   const lastArray = duplicateAnimalsArray.map((item, index) => (
     item = {
       id: item._id,
-      name: item.name,
+      name: item.name.toLowerCase(),
       image: item.artwork.url,
       key: index,
     }
@@ -47,7 +47,7 @@ const Main = () => {
 
   return(
     <div>
-      hi
+      Night Zookeeper
       {/* <Login /> */}
       <Game cards={lastArray}/>
     </div>
