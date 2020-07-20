@@ -1,59 +1,40 @@
-import React from 'react';
-import { useQuery, gql } from '@apollo/client';
-import shuffleArray from '../helpers'
+import React, { useState } from 'react';
+import Cards from '../cards';
 
-const API = gql`
-  {
-    topAnimals {
-      _id
-      name
-      artwork {
-        url
+const Game = (props) => {
+  const { cards } = props;
+  const [newCards, setNewCards] = useState(cards);
+  // const [isActive, setisActive] = useState(false);
+  const [cardSelected, setCardSelected] = useState([]);
+
+  // const handleClick = (id) => {
+  //   console.log(id);
+  //   const other = newCards.filter(card => (
+  //     card.id !== id)
+  //   )
+  //   setNewCards(other);
+  //   console.log(newCards);
+  // }
+
+  const handleClick = (id) => {
+    if (cardSelected.length) {
+      if (id === cardSelected[0]) {
+        const updateCards = newCards.filter(card => (
+          card.id !== id
+        ))
+        setNewCards(updateCards);
+        setCardSelected([]);
+      } else {
+        setCardSelected([]);
       }
+    } else {
+      setCardSelected([id]);
     }
-  }
-`
-const Game = () => {
+  };
 
-  const { loading, error, data } = useQuery(API);
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
-
-  const animalArr = [];
-
-  data.topAnimals.forEach((item) => (
-    animalArr.push({
-      id: item._id,
-      name: item.name,
-      image: item.artwork.url,
-    })
-  ));
-
-  console.log(animalArr);
-
-  shuffleArray(animalArr);
-
-  console.log(animalArr[0].name)
-
-  const slicedAnimalArr = animalArr.slice(0,8);
-  const animalArrayDuplicated = slicedAnimalArr;
-  
-  slicedAnimalArr.forEach((item) => (
-    animalArrayDuplicated.push(item)
-  ))
-
-  shuffleArray(animalArrayDuplicated);
-  console.log(animalArrayDuplicated[0].name);
-
-  // return animalArr.map((item) => (
-  //   <div key={item.id}>
-  //     <div>{item.name}</div>
-  //     <img src={item.image} alt=""></img>
-  //   </div>
-  // ));
   return (
     <div>
-      hello
+      <Cards cards={newCards} click={handleClick}/>
     </div>
   );
 }
