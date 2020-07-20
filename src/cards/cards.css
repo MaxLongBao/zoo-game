@@ -1,6 +1,6 @@
 img {
-    height: 90px;
-    width: 110px;
+    height: 6rem;
+    width: 6rem;
 }
 
 .card-container {
@@ -18,9 +18,9 @@ img {
     background-color: #eeeeee;
     border-radius: 5px;
     padding: 2px;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
 .card-name {
@@ -29,6 +29,6 @@ img {
     font-family: 'Indie Flower', cursive;
 }
 
-.hide-cards {
+.hide-card {
     visibility: hidden;
 }
