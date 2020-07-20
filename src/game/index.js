@@ -6,7 +6,7 @@ import './game.css';
 const Game = (props) => {
   const { cards } = props;
   const [newCards, setNewCards] = useState(cards);
-  const [cardSelected, setCardSelected] = useState(null);
+  const [cardSelected, setCardSelected] = useState({id: null, key: null});
 
   // const handleClick = (id) => {
   //   console.log(id);
@@ -17,26 +17,26 @@ const Game = (props) => {
   //   console.log(newCards);
   // }
 
-  const handleClick = (id) => {
-    if (cardSelected) {
-      if (id === cardSelected) {
-        // const updateCards = newCards.filter(card => (
-        //   card.id !== id
-        // ))
-        // setNewCards(updateCards);
+  const handleClick = (id, key) => {
+    if (cardSelected.id !== null) {
+      if (id === cardSelected.id && key !== cardSelected.key) {
         newCards.map(card => {
-          // card.style = {visibility: card.id === id ? 'hidden'}
           console.log("hi")
           if (card.id === id) {
             card.hidden = {visibility: 'hidden'};
-          };
+          }
         })
-      } else {
       }
-      setCardSelected(null);
+      setCardSelected({
+        id: null,
+        key: null,
+      });
     } else {
-      setCardSelected(id);
-      console.log(id);
+      setCardSelected({
+        id: id,
+        key: key,
+      });
+      console.log(cardSelected.key);
     }
   };
 

@@ -21,30 +21,35 @@ const Main = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  const animalArr = [];
+  const animalArray = [];
 
   data.topAnimals.forEach((item) => (
-    animalArr.push({
+    animalArray.push(item)
+  ));
+  shuffleArray(animalArray);
+  
+  const selectedAnimals = animalArray.slice(0,8);
+  const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
+  // animalArrayDuplicated.forEach((item) => (
+    //   animalArrayDuplicated.push(item)
+    // ))
+  shuffleArray(duplicateAnimalsArray);
+  const lastArray = duplicateAnimalsArray.map((item, index) => (
+    item = {
       id: item._id,
       name: item.name,
       image: item.artwork.url,
-    })
-  ));
-
-  shuffleArray(animalArr);
-
-  const animalArrayDuplicated = animalArr.slice(0,8);
-  animalArrayDuplicated.forEach((item) => (
-    animalArrayDuplicated.push(item)
+      key: index,
+    }
   ))
-
-  shuffleArray(animalArrayDuplicated);
+  console.log(lastArray);
+    
 
   return(
     <div>
       hi
       {/* <Login /> */}
-      <Game cards={animalArrayDuplicated}/>
+      <Game cards={lastArray}/>
     </div>
   );
 }
