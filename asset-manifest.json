@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/zoo-game/static/css/main.bd61015e.chunk.css",
-    "main.js": "/zoo-game/static/js/main.57b9b29f.chunk.js",
-    "main.js.map": "/zoo-game/static/js/main.57b9b29f.chunk.js.map",
+    "main.css": "/zoo-game/static/css/main.fc3fbdd5.chunk.css",
+    "main.js": "/zoo-game/static/js/main.249f919c.chunk.js",
+    "main.js.map": "/zoo-game/static/js/main.249f919c.chunk.js.map",
     "runtime-main.js": "/zoo-game/static/js/runtime-main.7cd42693.js",
     "runtime-main.js.map": "/zoo-game/static/js/runtime-main.7cd42693.js.map",
-    "static/js/2.4b2bba44.chunk.js": "/zoo-game/static/js/2.4b2bba44.chunk.js",
-    "static/js/2.4b2bba44.chunk.js.map": "/zoo-game/static/js/2.4b2bba44.chunk.js.map",
+    "static/js/2.c9eb6fc7.chunk.js": "/zoo-game/static/js/2.c9eb6fc7.chunk.js",
+    "static/js/2.c9eb6fc7.chunk.js.map": "/zoo-game/static/js/2.c9eb6fc7.chunk.js.map",
     "index.html": "/zoo-game/index.html",
-    "precache-manifest.043d240fcceda1e0b6de0e18c7a37ebf.js": "/zoo-game/precache-manifest.043d240fcceda1e0b6de0e18c7a37ebf.js",
+    "precache-manifest.1269eafb6481829717ebea8a0c0bf3c7.js": "/zoo-game/precache-manifest.1269eafb6481829717ebea8a0c0bf3c7.js",
     "service-worker.js": "/zoo-game/service-worker.js",
-    "static/css/main.bd61015e.chunk.css.map": "/zoo-game/static/css/main.bd61015e.chunk.css.map",
-    "static/js/2.4b2bba44.chunk.js.LICENSE.txt": "/zoo-game/static/js/2.4b2bba44.chunk.js.LICENSE.txt"
+    "static/css/main.fc3fbdd5.chunk.css.map": "/zoo-game/static/css/main.fc3fbdd5.chunk.css.map",
+    "static/js/2.c9eb6fc7.chunk.js.LICENSE.txt": "/zoo-game/static/js/2.c9eb6fc7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7cd42693.js",
-    "static/js/2.4b2bba44.chunk.js",
-    "static/css/main.bd61015e.chunk.css",
-    "static/js/main.57b9b29f.chunk.js"
+    "static/js/2.c9eb6fc7.chunk.js",
+    "static/css/main.fc3fbdd5.chunk.css",
+    "static/js/main.249f919c.chunk.js"
   ]
 }
