@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Cards from '../cards';
 
+import './game.css';
+
 const Game = (props) => {
   const { cards } = props;
   const [newCards, setNewCards] = useState(cards);
-  // const [isActive, setisActive] = useState(false);
-  const [cardSelected, setCardSelected] = useState([]);
+  const [cardSelected, setCardSelected] = useState(null);
 
   // const handleClick = (id) => {
   //   console.log(id);
@@ -17,23 +18,30 @@ const Game = (props) => {
   // }
 
   const handleClick = (id) => {
-    if (cardSelected.length) {
-      if (id === cardSelected[0]) {
-        const updateCards = newCards.filter(card => (
-          card.id !== id
-        ))
-        setNewCards(updateCards);
-        setCardSelected([]);
+    if (cardSelected) {
+      if (id === cardSelected) {
+        // const updateCards = newCards.filter(card => (
+        //   card.id !== id
+        // ))
+        // setNewCards(updateCards);
+        newCards.map(card => {
+          // card.style = {visibility: card.id === id ? 'hidden'}
+          console.log("hi")
+          if (card.id === id) {
+            card.hidden = {visibility: 'hidden'};
+          };
+        })
       } else {
-        setCardSelected([]);
       }
+      setCardSelected(null);
     } else {
-      setCardSelected([id]);
+      setCardSelected(id);
+      console.log(id);
     }
   };
 
   return (
-    <div>
+    <div className='container'>
       <Cards cards={newCards} click={handleClick}/>
     </div>
   );

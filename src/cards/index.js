@@ -1,13 +1,13 @@
 import React from 'react';
+
 import './cards.css'
 
 const Cards = (props) => {
   const { cards, click } = props;
-  console.log(cards)
   const cardsList = cards.map(card => {
     return (
-      <div key={Math.random()} onClick={() => {click(card.id)}}>
-        <img src={card.image} alt='animal' />
+      <div key={Math.random()} onClick={() => {click(card.id)}} className="card" style={card.hidden}>
+        <div><img src={card.image} alt='animal' /></div>
         <div>{card.name}</div>
       </div>
     )

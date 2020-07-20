@@ -1,9 +1,18 @@
+img {
+    height: 100px;
+    width: 150px;
+    /* visibility: hidden; */
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
 }
+/* 
+.card {
+    background: url('../images/card_back.png');
+} */
 
-img {
-    height: 100px;
-    width: 100px;
+.hide-cards {
+    visibility: hidden;
 }
