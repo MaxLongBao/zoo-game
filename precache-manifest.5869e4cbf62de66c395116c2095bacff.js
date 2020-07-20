@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b722595cc755e196c55d030e5d9e1d6",
+    "revision": "6eac72595a0dc7f74253531d8f0e4030",
     "url": "/zoo-game/index.html"
   },
   {
-    "revision": "94fe2006b6345232ef1b",
-    "url": "/zoo-game/static/css/main.c6d07b05.chunk.css"
+    "revision": "2d7392ba2dd1be5c2990",
+    "url": "/zoo-game/static/css/main.0de7c67f.chunk.css"
   },
   {
     "revision": "0ac787b1f1c12f0c4907",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zoo-game/static/js/2.dd01f55b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "94fe2006b6345232ef1b",
+    "revision": "2d7392ba2dd1be5c2990",
     "url": "/zoo-game/static/js/main.19e9ff7f.chunk.js"
   },
   {
