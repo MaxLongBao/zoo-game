@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import shuffleArray from '../helpers'
 import Game from '../game';
+import card_back from '../images/card_back.png';
 
 import './main.css'
 
@@ -39,6 +40,7 @@ const Main = () => {
       id: item._id,
       name: item.name.toLowerCase(),
       image: item.artwork.url,
+      flipped: card_back,
       key: index,
     }
   ))

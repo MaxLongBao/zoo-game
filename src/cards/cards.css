@@ -21,6 +21,8 @@ img {
     -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    height: 6rem;
+    width: 6rem;
 }
 
 .card-name {
@@ -29,6 +31,12 @@ img {
     font-family: 'Indie Flower', cursive;
 }
 
-.hide-card {
-    visibility: hidden;
-}
+/* .card-back {
+    background: url(../images/card_back.png);
+    background-size: cover;
+} */
+
+/* .background {
+    background: url(../images/card_back.png);
+    background-size: cover;
+} */
