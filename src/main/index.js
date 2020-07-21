@@ -41,6 +41,7 @@ const Main = () => {
       name: item.name.toLowerCase(),
       image: item.artwork.url,
       flipped: card_back,
+      activeImage: card_back,
       key: index,
     }
   ))
