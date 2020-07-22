@@ -39,7 +39,7 @@ const Main = () => {
   const startGame = (name) => {
     shuffleArray(animalArray);
     
-    const selectedAnimals = animalArray.slice(0,2);
+    const selectedAnimals = animalArray.slice(0,8);
     const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
     shuffleArray(duplicateAnimalsArray);
     

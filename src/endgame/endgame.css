@@ -1,0 +1,54 @@
+.endgame-container {
+  height: 90vh;
+}
+
+.endgame-card {
+  position: absolute;
+  width: 30%;
+  top: 25%;
+  left: 33%;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  font-family: 'Itim', cursive;
+  filter: none;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  background: #fafafa;
+}
+
+.endgame-text {
+  padding-top: 5px;
+  letter-spacing: 3px;
+  color: #be2a92;
+}
+
+.endgame-button {
+  margin: 40px auto;
+  border-radius: 50px;
+  font-family: 'Itim', cursive;
+  font-size: 25px;
+  color: white;
+  border: none;
+  padding: 5px 60px;
+  background: #be2a92;
+  background: linear-gradient(90deg, rgba(176,88,136,1) 1%, rgba(190,42,146,1) 51%, rgba(145,48,147,1) 100%);
+}
+
+.endgame-button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .endgame-card {
+    width: 70%;
+    left: 15%;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .endgame-card {
+    width: 20%;
+  }
+}

@@ -11,19 +11,17 @@ const Login = (props) => {
   <div className='form-container'>
     <div className='form-background'>
     </div>
-    <div className='form-box'>
+    <div className='form-card'>
       <form>
-      <div className="form-group">
         <div className="form-text">
           <h1>WELCOME!</h1>
         </div>
-          <input
-            type="name"
-            className="form-control"
-            placeholder='Insert your name'
-            onChange={e => setName(e.target.value)}
-          />
-        </div>
+        <input
+          type="name"
+          className="form-control"
+          placeholder='Insert your name'
+          onChange={e => setName(e.target.value)}
+        />
         <button className='form-button' onClick={() => {handleStart(name)}}>PLAY!</button>
       </form>
     </div>
