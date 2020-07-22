@@ -3,6 +3,7 @@ import { useQuery, gql } from '@apollo/client';
 import Game from '../game';
 import Login from '../login';
 import Navbar from '../navbar';
+import EndGame from '../endgame';
 import card_back from '../images/card_back.png';
 import shuffleArray from '../helpers';
 
@@ -23,6 +24,7 @@ const API_REQUEST = gql`
 const Main = () => {
   const [gameCards, setGameCards] = useState([])
   const [name, setName] = useState('');
+  const [endGame, setEndGame] = useState(false);
   const { loading, error, data } = useQuery(API_REQUEST);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -36,7 +38,7 @@ const Main = () => {
   const startGame = (name) => {
     shuffleArray(animalArray);
     
-    const selectedAnimals = animalArray.slice(0,8);
+    const selectedAnimals = animalArray.slice(0,2);
     const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
     shuffleArray(duplicateAnimalsArray);
     
@@ -57,12 +59,16 @@ const Main = () => {
     startGame(name)
   }
 
+  const handleEnd = () => {
+    setEndGame(true);
+  }
   return(
     <div className='main-container'>
       <Navbar name={name} />
       { name === ''
       ? <Login handleStart={handleStart}/>
-      : <Game cards={gameCards}/> }
+      : <Game cards={gameCards} handleEnd={handleEnd}/> }
+      { endGame ? <EndGame /> : null }
     </div>
   );
 }

@@ -30,7 +30,6 @@
 .form-text {
     padding-top: 5px;
     letter-spacing: 3px;
-    color: white;
     color: rgba(190,42,146,1);
 }
 
@@ -48,7 +47,6 @@
 }
 
 ::placeholder {
-    color: rgba(176,88,136,1);
     color: rgba(39,121,180,1);
     font-family: 'Itim', cursive;
     font-size: 20px;
