@@ -6,4 +6,5 @@
 body {
   background: url('../images/bg.png') no-repeat;
   background-size: cover;
+  background-color: black;
 }
