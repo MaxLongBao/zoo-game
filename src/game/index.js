@@ -4,7 +4,7 @@ import Cards from '../cards';
 import './game.css';
 
 const Game = (props) => {
-  const { cards, handleStart } = props;
+  const { cards } = props;
   const [newCards, setNewCards] = useState(cards);
   const [cardSelected, setCardSelected] = useState({id: null, key: null});
   const [counter, setCounter] = useState(0);

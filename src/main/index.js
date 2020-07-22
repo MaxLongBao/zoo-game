@@ -21,7 +21,7 @@ const API_REQUEST = gql`
 `
 
 const Main = () => {
-  const [lastArray, setLastArray] = useState([])
+  const [gameCards, setGameCards] = useState([])
   const [name, setName] = useState('');
   const { loading, error, data } = useQuery(API_REQUEST);
   if (loading) return <p>Loading...</p>;
@@ -40,7 +40,7 @@ const Main = () => {
     const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
     shuffleArray(duplicateAnimalsArray);
     
-    setLastArray(duplicateAnimalsArray.map((item, index) => (
+    setGameCards(duplicateAnimalsArray.map((item, index) => (
       item = {
         id: item._id,
         name: item.name.toLowerCase(),
@@ -52,8 +52,7 @@ const Main = () => {
     )))
     setName(name)
   }
-  console.log(lastArray);
-  
+
   const handleStart = (name) => {
     startGame(name)
   }
@@ -63,7 +62,7 @@ const Main = () => {
       <Navbar name={name} />
       { name === ''
       ? <Login handleStart={handleStart}/>
-      : name === '' ? null : <Game cards={lastArray} handleStart={handleStart}/> }
+      : <Game cards={gameCards}/> }
     </div>
   );
 }
