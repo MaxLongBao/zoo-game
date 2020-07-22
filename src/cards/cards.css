@@ -7,13 +7,15 @@ img {
     width: 500px;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 40px auto;
     /* background-color: #33a6e4; */
     /* background-color: #ffffff; */
 }
 
 .card {
     /* background: url('../images/card_back.png'); */
+    height: 6rem;
+    width: 6rem;
     margin: 5px;
     background-color: #eeeeee;
     border-radius: 5px;
@@ -21,14 +23,6 @@ img {
     -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
-    height: 6rem;
-    width: 6rem;
-}
-
-.card-name {
-    text-align: center;
-    margin-top: 20px;
-    font-family: 'Indie Flower', cursive;
 }
 
 /* .card-back {

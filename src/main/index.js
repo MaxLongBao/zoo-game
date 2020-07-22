@@ -58,7 +58,7 @@ const Main = () => {
   }
 
   return(
-    <div>
+    <div className='main-container'>
       <Navbar name={name} />
       { name === ''
       ? <Login handleStart={handleStart}/>
