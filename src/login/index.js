@@ -3,28 +3,32 @@ import React, { useState } from 'react';
 import './login.css';
 
 const Login = (props) => {
-    const { handleStart } = props;
+  const { handleStart } = props;
 
-    const [name, setName] = useState('');
+  const [name, setName] = useState('');
 
-    return (
-        <div>
-            <form>
-            <div className="form-group">
-              <label>Name</label>
-              <input
-                type="name"
-                className="form-control"
-                onChange={e => setName(e.target.value)}
-              />
-              <small className="form-text text-muted">
-                This is a memory game
-              </small>
-            </div>
-            <button onClick={() => {handleStart(name)}}>Submit</button>
-          </form>
+  return (
+  <div className='form-container'>
+    <div className='form-background'>
+    </div>
+    <div className='form-box'>
+      <form>
+      <div className="form-group">
+        <div className="form-text">
+          <h1>WELCOME!</h1>
         </div>
-    )
+          <input
+            type="name"
+            className="form-control"
+            placeholder='Insert your name'
+            onChange={e => setName(e.target.value)}
+          />
+        </div>
+        <button className='form-button' onClick={() => {handleStart(name)}}>PLAY!</button>
+      </form>
+    </div>
+  </div>
+  )
 }
 
 export default Login;
