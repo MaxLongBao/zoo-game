@@ -11,45 +11,45 @@ const Game = (props) => {
 
   useEffect(() => {}, [counter] )
 
+  const animation = {transform: 'rotateY(180deg)', transition: 'transform 0.8s'}
+  const resetCard = { id: null, key: null };
+  
   const handleClick = (id, key) => {
+
+      setTimeout(() => {newCards[key].activeImage = newCards[key].image
+      setCounter(counter + 1)}, 200)
+      newCards[key].style = animation;
+
     if (cardSelected.id !== null) {
       if (id === cardSelected.id && key !== cardSelected.key) {
-        newCards[key].activeImage = newCards[key].image;
-        setCounter(counter - 1)
         setTimeout(() => {
           newCards[key].style = {visibility: 'hidden'}
           newCards[cardSelected.key].style = {visibility: 'hidden'}
-          setCounter(counter + 2)
+          setCounter(counter - 1)
         }, 1000)
-        setCardSelected({
-          id: null,
-          key: null,
-        });
+        setCardSelected(resetCard);
       } else {
-        newCards[key].activeImage = newCards[key].image
         console.log('card is visible')
         setTimeout(() => {
           newCards[key].activeImage = newCards[key].flipped
           newCards[cardSelected.key].activeImage = newCards[cardSelected.key].flipped
+          newCards[key].style = {}
+          newCards[cardSelected.key].style = {}
           console.log("card is flipped back")
-          setCounter(counter + 1)}, 1000)
+          setCounter(counter - 1)}, 1000)
         console.log(counter)
-        setCardSelected({
-          id: null,
-          key: null,
-        });
+        setCardSelected(resetCard);
       }
     } else {
       setCardSelected({
         id,
         key,
       });
-      newCards[key].activeImage = newCards[key].image;
+      
+      console.log(newCards[key].style)
     }
   };
-  console.log(cards)
 
-console.log(newCards === [])
    return(
     <div className='container'>
       <Cards cards={newCards} handleClick={handleClick} />
