@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Sound from 'react-sound';
 import Cards from '../cards';
+import sound from '../sounds/zoo.mp3';
 
 import './game.css';
 
@@ -63,10 +65,11 @@ const Game = (props) => {
     if (cardsLeft === 0) {
       setTimeout(() => handleEnd(guesses), 1000);
     }
-
+    console.log(sound)
     return(
     <div className='container'>
       <Cards cards={newCards} handleClick={handleClick} />
+      <Sound url={sound} playStatus={Sound.status.PLAYING} loop={true}/>
     </div>
   );
 }
