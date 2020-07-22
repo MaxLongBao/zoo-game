@@ -33,29 +33,29 @@ const Main = () => {
     animalArray.push(item)
     ));
 
-  const myFunc = () => {
-  shuffleArray(animalArray);
-  
-  const selectedAnimals = animalArray.slice(0,8);
-  const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
-  shuffleArray(duplicateAnimalsArray);
-  
-  setLastArray(duplicateAnimalsArray.map((item, index) => (
-    item = {
-      id: item._id,
-      name: item.name.toLowerCase(),
-      image: item.artwork.url,
-      flipped: card_back,
-      activeImage: card_back,
-      key: index,
-    }
-  )))
+  const startGame = (name) => {
+    shuffleArray(animalArray);
+    
+    const selectedAnimals = animalArray.slice(0,8);
+    const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
+    shuffleArray(duplicateAnimalsArray);
+    
+    setLastArray(duplicateAnimalsArray.map((item, index) => (
+      item = {
+        id: item._id,
+        name: item.name.toLowerCase(),
+        image: item.artwork.url,
+        flipped: card_back,
+        activeImage: card_back,
+        key: index,
+      }
+    )))
+    setName(name)
   }
   console.log(lastArray);
-
+  
   const handleStart = (name) => {
-    setName(name)
-    myFunc()
+    startGame(name)
   }
 
   return(
@@ -63,8 +63,7 @@ const Main = () => {
       <Navbar name={name} />
       { name === ''
       ? <Login handleStart={handleStart}/>
-      : name === '' ? null : <Game cards={lastArray} handleStart={handleStart}/>
-      }
+      : name === '' ? null : <Game cards={lastArray} handleStart={handleStart}/> }
     </div>
   );
 }
