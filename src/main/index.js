@@ -40,7 +40,7 @@ const Main = () => {
 
     shuffleArray(animalArray);
     
-    const selectedAnimals = animalArray.slice(0,1);
+    const selectedAnimals = animalArray.slice(0,8);
     const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
     shuffleArray(duplicateAnimalsArray);
     
