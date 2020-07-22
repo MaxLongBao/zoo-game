@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/zoo-game/precache-manifest.943a8686db9f476e76aad1589f2bc9dc.js"
+  "/zoo-game/precache-manifest.8fdef7e3e1486aadaf630c7d0e3fdc06.js"
 );
 
 self.addEventListener('message', (event) => {
