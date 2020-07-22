@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "07f52852fd1a2306dbe086a8214ab9a6",
+    "revision": "b1a6a9b95147582f6e6d66b150452c8c",
     "url": "/zoo-game/index.html"
   },
   {
-    "revision": "c016c14dc344d7a5a744",
-    "url": "/zoo-game/static/css/main.eed0b68b.chunk.css"
+    "revision": "d774fc6532b080a60de6",
+    "url": "/zoo-game/static/css/main.75c14348.chunk.css"
   },
   {
-    "revision": "cd5e10779de02935f938",
-    "url": "/zoo-game/static/js/2.89127319.chunk.js"
+    "revision": "b6c10075dcc152296ff0",
+    "url": "/zoo-game/static/js/2.1d86e91c.chunk.js"
   },
   {
     "revision": "c97fb91e7dd1c7b19ae67fb152a2e6b2",
-    "url": "/zoo-game/static/js/2.89127319.chunk.js.LICENSE.txt"
+    "url": "/zoo-game/static/js/2.1d86e91c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c016c14dc344d7a5a744",
-    "url": "/zoo-game/static/js/main.bfa4de35.chunk.js"
+    "revision": "d774fc6532b080a60de6",
+    "url": "/zoo-game/static/js/main.fd574886.chunk.js"
   },
   {
     "revision": "20080c0bc47b96a301d3",
