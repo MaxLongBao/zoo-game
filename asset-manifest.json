@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/zoo-game/static/css/main.a3d68050.chunk.css",
-    "main.js": "/zoo-game/static/js/main.d56baf77.chunk.js",
-    "main.js.map": "/zoo-game/static/js/main.d56baf77.chunk.js.map",
+    "main.js": "/zoo-game/static/js/main.3a707e4b.chunk.js",
+    "main.js.map": "/zoo-game/static/js/main.3a707e4b.chunk.js.map",
     "runtime-main.js": "/zoo-game/static/js/runtime-main.7cd42693.js",
     "runtime-main.js.map": "/zoo-game/static/js/runtime-main.7cd42693.js.map",
-    "static/js/2.1d86e91c.chunk.js": "/zoo-game/static/js/2.1d86e91c.chunk.js",
-    "static/js/2.1d86e91c.chunk.js.map": "/zoo-game/static/js/2.1d86e91c.chunk.js.map",
+    "static/js/2.4da92a8f.chunk.js": "/zoo-game/static/js/2.4da92a8f.chunk.js",
+    "static/js/2.4da92a8f.chunk.js.map": "/zoo-game/static/js/2.4da92a8f.chunk.js.map",
     "index.html": "/zoo-game/index.html",
-    "precache-manifest.0e7ba027c3c06037249af5008024cff3.js": "/zoo-game/precache-manifest.0e7ba027c3c06037249af5008024cff3.js",
+    "precache-manifest.bc79588ed56bfd52adef35e5c3a08723.js": "/zoo-game/precache-manifest.bc79588ed56bfd52adef35e5c3a08723.js",
     "service-worker.js": "/zoo-game/service-worker.js",
     "static/css/main.a3d68050.chunk.css.map": "/zoo-game/static/css/main.a3d68050.chunk.css.map",
-    "static/js/2.1d86e91c.chunk.js.LICENSE.txt": "/zoo-game/static/js/2.1d86e91c.chunk.js.LICENSE.txt",
+    "static/js/2.4da92a8f.chunk.js.LICENSE.txt": "/zoo-game/static/js/2.4da92a8f.chunk.js.LICENSE.txt",
     "static/media/main.css": "/zoo-game/static/media/bg.b06e3736.png",
-    "static/media/card_back.png": "/zoo-game/static/media/card_back.521923bb.png"
+    "static/media/card_back.png": "/zoo-game/static/media/card_back.521923bb.png",
+    "static/media/zoo.mp3": "/zoo-game/static/media/zoo.85a75ebb.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.7cd42693.js",
-    "static/js/2.1d86e91c.chunk.js",
+    "static/js/2.4da92a8f.chunk.js",
     "static/css/main.a3d68050.chunk.css",
-    "static/js/main.d56baf77.chunk.js"
+    "static/js/main.3a707e4b.chunk.js"
   ]
 }
