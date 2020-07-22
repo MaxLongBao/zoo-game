@@ -7,10 +7,11 @@ const Game = (props) => {
   const { cards, handleEnd } = props;
   const [newCards, setNewCards] = useState(cards);
   const [cardSelected, setCardSelected] = useState({id: null, key: null});
-  const [counter, setCounter] = useState(0);
+  const [update, setUpdate] = useState(0);
   const [cardsLeft, setCardsLeft] = useState(4);
+  const [guesses, setGuesses] = useState(0);
 
-  useEffect(() => {}, [counter] )
+  useEffect(() => {}, [update] )
 
   const animation = {
     transform: 'rotateY(180deg)',
@@ -25,15 +26,17 @@ const Game = (props) => {
   const handleClick = (id, key) => {
 
       setTimeout(() => {newCards[key].activeImage = newCards[key].image
-      setCounter(counter + 1)}, 200)
+      setUpdate(update + 1)}, 200);
+
       newCards[key].style = animation;
+      setGuesses(guesses + 0.5);
 
     if (cardSelected.id !== null) {
       if (id === cardSelected.id && key !== cardSelected.key) {
         setTimeout(() => {
           newCards[key].style = {visibility: 'hidden'}
           newCards[cardSelected.key].style = {visibility: 'hidden'}
-          setCounter(counter - 1)
+          setUpdate(update - 1)
         }, 1000)
         setCardsLeft(cardsLeft - 2);
         setCardSelected(resetCard);
@@ -45,8 +48,8 @@ const Game = (props) => {
           newCards[key].style = {}
           newCards[cardSelected.key].style = {}
           // console.log("card is flipped back")
-          setCounter(counter - 1)}, 1000)
-        console.log(counter)
+          setUpdate(update - 1)}, 1000)
+        console.log(update)
         setCardSelected(resetCard);
       }
     } else {
@@ -58,8 +61,10 @@ const Game = (props) => {
   };
   console.log(cardsLeft)
     if (cardsLeft === 0) {
-      setTimeout(handleEnd, 1000);
+      setTimeout(() => handleEnd(guesses), 1000);
     }
+    console.log("guesses", guesses);
+
    return(
     <div className='container'>
       <Cards cards={newCards} handleClick={handleClick} />

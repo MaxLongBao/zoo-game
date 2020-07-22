@@ -25,6 +25,7 @@ const Main = () => {
   const [gameCards, setGameCards] = useState([])
   const [name, setName] = useState('');
   const [endGame, setEndGame] = useState(false);
+  const [guesses, setGuesses] = useState(0);
   const { loading, error, data } = useQuery(API_REQUEST);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -59,16 +60,18 @@ const Main = () => {
     startGame(name)
   }
 
-  const handleEnd = () => {
+  const handleEnd = (guesses) => {
+    setGuesses(guesses);
     setEndGame(true);
   }
+
   return(
     <div className='main-container'>
       <Navbar name={name} />
       { name === ''
       ? <Login handleStart={handleStart}/>
-      : <Game cards={gameCards} handleEnd={handleEnd}/> }
-      { endGame ? <EndGame /> : null }
+      : <Game cards={gameCards} handleEnd={handleEnd} /> }
+      { endGame ? <EndGame guesses={guesses}/> : null }
     </div>
   );
 }
