@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Sound from 'react-sound';
+// import Sound from 'react-sound';
 import Cards from '../cards';
 import sound from '../sounds/zoo.mp3';
 
@@ -69,7 +69,7 @@ const Game = (props) => {
     return(
     <div className='container'>
       <Cards cards={newCards} handleClick={handleClick} />
-      <Sound url={sound} playStatus={Sound.status.PLAYING} loop={true}/>
+      {/* <Sound url={sound} playStatus={Sound.status.PLAYING} loop={true}/> */}
     </div>
   );
 }
