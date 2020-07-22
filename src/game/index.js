@@ -8,7 +8,7 @@ const Game = (props) => {
   const [newCards, setNewCards] = useState(cards);
   const [cardSelected, setCardSelected] = useState({id: null, key: null});
   const [update, setUpdate] = useState(0);
-  const [cardsLeft, setCardsLeft] = useState(16);
+  const [cardsLeft, setCardsLeft] = useState(2);
   const [guesses, setGuesses] = useState(0);
 
   useEffect(() => {}, [update] )
@@ -64,7 +64,7 @@ const Game = (props) => {
       setTimeout(() => handleEnd(guesses), 1000);
     }
     console.log("guesses", guesses);
-
+console.log(newCards)
    return(
     <div className='container'>
       <Cards cards={newCards} handleClick={handleClick} />

@@ -5,8 +5,8 @@
 .endgame-card {
   position: absolute;
   width: 30%;
-  top: 25%;
-  left: 33%;
+  top: 20%;
+  left: 40%;
   text-align: center;
   background-color: white;
   border-radius: 5px;
@@ -31,7 +31,7 @@
   font-size: 25px;
   color: white;
   border: none;
-  padding: 5px 60px;
+  padding: 5px 45px;
   background: #be2a92;
   background: linear-gradient(90deg, rgba(176,88,136,1) 1%, rgba(190,42,146,1) 51%, rgba(145,48,147,1) 100%);
 }
@@ -40,10 +40,37 @@
   cursor: pointer;
 }
 
+.endgame-guesses {
+  padding-top: 5px;
+  margin-bottom: -15px;
+  color: #2779b4;
+}
+
+.endgame-guesses-num {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #2779b4;
+  color: #fafafa;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 600px) {
+  .endgame-container {
+    font-size: 12px;
+  }
   .endgame-card {
     width: 70%;
     left: 15%;
+  }
+  .endgame-button {
+    padding: 5px 30px;
+  }
+  .endgame-guesses-num {
+    width: 60px;
+    height: 60px;
   }
 }
 

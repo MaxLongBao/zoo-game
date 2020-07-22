@@ -7,15 +7,17 @@ const EndGame = (props) => {
   return (
     <div className='endgame-container'>
       <div className='endgame-card'>
-        <div className="endgame-text">
+        <div className='endgame-text'>
           <h1>GAME OVER!</h1>
+          <div className='endgame-guesses'>
+            <h1>You guessed in</h1>
+            <div className='endgame-guesses-num'>
+              <h1>{guesses}</h1>
+            </div>
+            <h1>attempts!</h1>
+          </div>
         </div>
-        <div className="endgame-guesses">
-          <h1>You guessed in</h1>
-          <h1>{guesses}</h1>
-          <h1>attempts!</h1>
-        </div>
-        <button className='endgame-button' onClick={() => {console.log("restart")}}>PLAY!</button>
+        <a href='https://maxlongbao.github.io/zoo-game/'><button className='endgame-button'>PLAY AGAIN!</button></a>
       </div>
     </div>
     )

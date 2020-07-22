@@ -37,9 +37,10 @@ const Main = () => {
     ));
 
   const startGame = (name) => {
+
     shuffleArray(animalArray);
     
-    const selectedAnimals = animalArray.slice(0,8);
+    const selectedAnimals = animalArray.slice(0,1);
     const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
     shuffleArray(duplicateAnimalsArray);
     
@@ -69,9 +70,9 @@ const Main = () => {
     <div className='main-container'>
       <Navbar name={name} />
       { name === ''
-      ? <Login handleStart={handleStart}/>
+      ? <Login handleStart={handleStart} />
       : <Game cards={gameCards} handleEnd={handleEnd} /> }
-      { endGame ? <EndGame guesses={guesses}/> : null }
+      { endGame ? <EndGame guesses={guesses} /> : null }
     </div>
   );
 }
