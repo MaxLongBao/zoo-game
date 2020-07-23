@@ -42,21 +42,21 @@ const Main = () => {
     <div className='error'>
       <h1>Loading Error</h1>
       <a href='https://maxlongbao.github.io/zoo-game/'>Click here</a>
-      <p>to refresh the page</p>
+      <p>to reload the page or manually refresh your browser</p>
     </div>
   );
 
-  const animalArray = [];
+  const responseArray = [];
 
   data.topAnimals.forEach((item) => (
-    animalArray.push(item)
+    responseArray.push(item)
     ));
 
   const startGame = (name) => {
 
-    shuffleArray(animalArray);
+    shuffleArray(responseArray);
     
-    const selectedAnimals = animalArray.slice(0,8);
+    const selectedAnimals = responseArray.slice(0,8);
     const duplicateAnimalsArray = selectedAnimals.concat(selectedAnimals);
     shuffleArray(duplicateAnimalsArray);
     

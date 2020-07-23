@@ -16,7 +16,7 @@ const Navbar = (props) => {
                 <h1>Player: {name}</h1>
             </div>
         </div>
-    )
+    );
 }
 
 export default Navbar;

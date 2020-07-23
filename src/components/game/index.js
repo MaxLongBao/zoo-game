@@ -25,11 +25,11 @@ const Game = (props) => {
   
   const handleClick = (id, key) => {
 
-      setTimeout(() => {newCards[key].activeImage = newCards[key].image
-      setUpdate(update + 1)}, 200);
+    setTimeout(() => {newCards[key].activeImage = newCards[key].image
+    setUpdate(update + 1)}, 200);
 
-      newCards[key].style = animation;
-      setGuesses(guesses + 0.5);
+    newCards[key].style = animation;
+    setGuesses(guesses + 0.5);
 
     if (cardSelected.id !== null) {
       if (id === cardSelected.id && key !== cardSelected.key) {
@@ -57,22 +57,22 @@ const Game = (props) => {
     }
   };
 
-  let play;
+  let playMusic;
 
   if (cardsLeft === 0) {
     setTimeout(() => handleEnd(guesses), 1000);
   }
 
   if (audio === true && cardsLeft !== 0) {
-    play = Sound.status.PLAYING; 
+    playMusic = Sound.status.PLAYING; 
   } else {
-    play = Sound.status.PAUSED;
+    playMusic = Sound.status.PAUSED;
   }
-  console.log(cardsLeft)
-    return(
+
+  return(
     <div className='container'>
       <Cards cards={newCards} handleClick={handleClick} />
-      <Sound url={sound} playStatus={play} loop={true}/>
+      <Sound url={sound} playStatus={playMusic} loop={true}/>
     </div>
   );
 }
