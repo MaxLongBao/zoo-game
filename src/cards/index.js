@@ -6,7 +6,7 @@ const Cards = (props) => {
   const { cards, handleClick } = props;
   const cardsList = cards.map(card => {
     return (
-      <div key={card.key} onClick={() => {handleClick(card.id, card.key)}} className={"card"} style={card.style}>
+      <div key={card.key} onClick={() => {handleClick(card.id, card.key)}} className={'card'} style={card.style}>
         <img src={card.activeImage} alt='animal' />
       </div>
     )
