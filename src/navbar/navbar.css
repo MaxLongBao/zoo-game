@@ -18,13 +18,24 @@
     letter-spacing: 1px;
 }
 
-.hidden {
-    visibility: hidden;
-    margin-left: 10%;
+.audio {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0 0 20px;
+    /* background-color: white; */
+    border-radius: 50px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
     .navbar {
         font-size: 6px;
+    }
+    .audio {
+        width: 20px;
+        height: 20px;
+        margin: 5px 0 0 10px;
+        background-color: #2779b4;
+        border-radius: 50px;
     }
 }

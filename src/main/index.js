@@ -28,6 +28,8 @@ const Main = () => {
   const [name, setName] = useState('');
   const [endGame, setEndGame] = useState(false);
   const [guesses, setGuesses] = useState(0);
+  const [audio, setAudio] = useState(pause);
+  const [isAudioOn, setIsAudioOn] = useState(true);
   const { loading, error, data } = useQuery(API_REQUEST);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -68,12 +70,21 @@ const Main = () => {
     setEndGame(true);
   }
 
+  const handleAudio = () => {
+    if (audio === pause) {
+      setAudio(play);
+      setIsAudioOn(false);
+    } else {
+      setAudio(pause);
+      setIsAudioOn(true);
+    }
+  }
   return(
     <div className='main-container'>
-      <Navbar name={name} />
+      <Navbar name={name} audio={audio} handleAudio={handleAudio}/>
       { name === ''
       ? <Login handleStart={handleStart} />
-      : <Game cards={gameCards} handleEnd={handleEnd} /> }
+      : <Game cards={gameCards} handleEnd={handleEnd} audio={isAudioOn}/> }
       { endGame ? <EndGame guesses={guesses} /> : null }
     </div>
   );

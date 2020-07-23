@@ -4,7 +4,7 @@ import Cards from '../cards';
 import sound from '../sounds/zoo.mp3';
 
 const Game = (props) => {
-  const { cards, handleEnd } = props;
+  const { cards, handleEnd, audio } = props;
   const [newCards, setNewCards] = useState(cards);
   const [cardSelected, setCardSelected] = useState({id: null, key: null});
   const [update, setUpdate] = useState(0);
@@ -57,12 +57,18 @@ const Game = (props) => {
     }
   };
 
-  let play = Sound.status.PLAYING;
+  let play;
 
   if (cardsLeft === 0) {
     setTimeout(() => handleEnd(guesses), 1000);
-    play = Sound.status.STOPPED;
   }
+
+  if (audio === true) {
+    play = Sound.status.PLAYING; 
+  } else {
+    play = Sound.status.PAUSED;
+  }
+  console.log("aksdgaskjdhgskjdgalkjg", audio)
 
     return(
     <div className='container'>
