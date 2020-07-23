@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/zoo-game/static/css/main.a68cb115.chunk.css",
+    "main.css": "/zoo-game/static/css/main.bb56c651.chunk.css",
     "main.js": "/zoo-game/static/js/main.2d9ef496.chunk.js",
     "main.js.map": "/zoo-game/static/js/main.2d9ef496.chunk.js.map",
     "runtime-main.js": "/zoo-game/static/js/runtime-main.7cd42693.js",
@@ -8,9 +8,9 @@
     "static/js/2.46d2e4bd.chunk.js": "/zoo-game/static/js/2.46d2e4bd.chunk.js",
     "static/js/2.46d2e4bd.chunk.js.map": "/zoo-game/static/js/2.46d2e4bd.chunk.js.map",
     "index.html": "/zoo-game/index.html",
-    "precache-manifest.f07d4916c136e0490da0e1ca44a60736.js": "/zoo-game/precache-manifest.f07d4916c136e0490da0e1ca44a60736.js",
+    "precache-manifest.637ae70f07e3cae187ab068536e917e8.js": "/zoo-game/precache-manifest.637ae70f07e3cae187ab068536e917e8.js",
     "service-worker.js": "/zoo-game/service-worker.js",
-    "static/css/main.a68cb115.chunk.css.map": "/zoo-game/static/css/main.a68cb115.chunk.css.map",
+    "static/css/main.bb56c651.chunk.css.map": "/zoo-game/static/css/main.bb56c651.chunk.css.map",
     "static/js/2.46d2e4bd.chunk.js.LICENSE.txt": "/zoo-game/static/js/2.46d2e4bd.chunk.js.LICENSE.txt",
     "static/media/main.css": "/zoo-game/static/media/bg.b06e3736.png",
     "static/media/card_back.png": "/zoo-game/static/media/card_back.521923bb.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.7cd42693.js",
     "static/js/2.46d2e4bd.chunk.js",
-    "static/css/main.a68cb115.chunk.css",
+    "static/css/main.bb56c651.chunk.css",
     "static/js/main.2d9ef496.chunk.js"
   ]
 }
