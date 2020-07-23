@@ -1,6 +1,6 @@
 import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
-import Main from './main'
+import Main from './components/main'
 
 import './App.css';
 

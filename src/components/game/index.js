@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Sound from 'react-sound';
 import Cards from '../cards';
-import sound from '../sounds/zoo.mp3';
+import sound from '../../assets/sounds/zoo.mp3';
 
 const Game = (props) => {
   const { cards, handleEnd, audio } = props;
@@ -63,13 +63,12 @@ const Game = (props) => {
     setTimeout(() => handleEnd(guesses), 1000);
   }
 
-  if (audio === true) {
+  if (audio === true && cardsLeft !== 0) {
     play = Sound.status.PLAYING; 
   } else {
     play = Sound.status.PAUSED;
   }
-  console.log("aksdgaskjdhgskjdgalkjg", audio)
-
+  console.log(cardsLeft)
     return(
     <div className='container'>
       <Cards cards={newCards} handleClick={handleClick} />

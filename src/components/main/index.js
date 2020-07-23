@@ -4,10 +4,10 @@ import Game from '../game';
 import Login from '../login';
 import Navbar from '../navbar';
 import EndGame from '../endgame';
-import card_back from '../images/card_back.png';
-import shuffleArray from '../helpers';
-import play from '../images/play.png';
-import pause from '../images/pause.png';
+import card_back from '../../assets/images/card_back.png';
+import shuffleArray from '../../helpers';
+import play from '../../assets/images/play.png';
+import pause from '../../assets/images/pause.png';
 
 import './main.css';
 
@@ -28,7 +28,7 @@ const Main = () => {
   const [name, setName] = useState('');
   const [endGame, setEndGame] = useState(false);
   const [guesses, setGuesses] = useState(0);
-  const [audio, setAudio] = useState(pause);
+  const [audioIcon, setAudioIcon] = useState(pause);
   const [isAudioOn, setIsAudioOn] = useState(true);
   const { loading, error, data } = useQuery(API_REQUEST);
   if (loading) return <p>Loading...</p>;
@@ -71,17 +71,17 @@ const Main = () => {
   }
 
   const handleAudio = () => {
-    if (audio === pause) {
-      setAudio(play);
+    if (audioIcon === pause) {
+      setAudioIcon(play);
       setIsAudioOn(false);
     } else {
-      setAudio(pause);
+      setAudioIcon(pause);
       setIsAudioOn(true);
     }
   }
   return(
     <div className='main-container'>
-      <Navbar name={name} audio={audio} handleAudio={handleAudio}/>
+      <Navbar name={name} audio={audioIcon} handleAudio={handleAudio}/>
       { name === ''
       ? <Login handleStart={handleStart} />
       : <Game cards={gameCards} handleEnd={handleEnd} audio={isAudioOn}/> }

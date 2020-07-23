@@ -3,7 +3,7 @@
 }
 
 .form-background {
-  background: url('../images/bg.png') no-repeat;
+  background: url('../../assets/images/bg.png') no-repeat;
   height: 100%;
   filter: blur(8px);
   -webkit-filter: blur(8px);
