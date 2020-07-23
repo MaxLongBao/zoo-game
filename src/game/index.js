@@ -57,14 +57,17 @@ const Game = (props) => {
     }
   };
 
+  let play = Sound.status.PLAYING;
+
   if (cardsLeft === 0) {
     setTimeout(() => handleEnd(guesses), 1000);
+    play = Sound.status.STOPPED;
   }
 
     return(
     <div className='container'>
       <Cards cards={newCards} handleClick={handleClick} />
-      <Sound url={sound} playStatus={Sound.status.PLAYING} loop={true}/>
+      <Sound url={sound} playStatus={play} loop={true}/>
     </div>
   );
 }

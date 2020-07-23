@@ -6,6 +6,8 @@ import Navbar from '../navbar';
 import EndGame from '../endgame';
 import card_back from '../images/card_back.png';
 import shuffleArray from '../helpers';
+import play from '../images/play.png';
+import pause from '../images/pause.png';
 
 import './main.css';
 
