@@ -31,8 +31,20 @@ const Main = () => {
   const [audioIcon, setAudioIcon] = useState(pause);
   const [isAudioOn, setIsAudioOn] = useState(true);
   const { loading, error, data } = useQuery(API_REQUEST);
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+
+  if (loading) return (
+    <div className='loading'>
+      <h1>Loading... Please wait</h1>
+    </div>
+  );
+
+  if (error) return (
+    <div className='error'>
+      <h1>Loading Error</h1>
+      <a href='https://maxlongbao.github.io/zoo-game/'>Click here</a>
+      <p>to refresh the page</p>
+    </div>
+  );
 
   const animalArray = [];
 
@@ -79,6 +91,7 @@ const Main = () => {
       setIsAudioOn(true);
     }
   }
+
   return(
     <div className='main-container'>
       <Navbar name={name} audio={audioIcon} handleAudio={handleAudio}/>

@@ -10,7 +10,7 @@ const EndGame = (props) => {
         <div className='endgame-text'>
           <h1>GAME OVER!</h1>
           <div className='endgame-guesses'>
-            <h1>You guessed in</h1>
+            <h1>You finished with</h1>
             <div className='endgame-guesses-num'>
               <h1>{guesses}</h1>
             </div>
