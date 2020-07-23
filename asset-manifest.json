@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/zoo-game/static/css/main.bb56c651.chunk.css",
-    "main.js": "/zoo-game/static/js/main.2d9ef496.chunk.js",
-    "main.js.map": "/zoo-game/static/js/main.2d9ef496.chunk.js.map",
+    "main.css": "/zoo-game/static/css/main.21647b7c.chunk.css",
+    "main.js": "/zoo-game/static/js/main.144ace3f.chunk.js",
+    "main.js.map": "/zoo-game/static/js/main.144ace3f.chunk.js.map",
     "runtime-main.js": "/zoo-game/static/js/runtime-main.7cd42693.js",
     "runtime-main.js.map": "/zoo-game/static/js/runtime-main.7cd42693.js.map",
-    "static/js/2.46d2e4bd.chunk.js": "/zoo-game/static/js/2.46d2e4bd.chunk.js",
-    "static/js/2.46d2e4bd.chunk.js.map": "/zoo-game/static/js/2.46d2e4bd.chunk.js.map",
+    "static/js/2.c316ebb2.chunk.js": "/zoo-game/static/js/2.c316ebb2.chunk.js",
+    "static/js/2.c316ebb2.chunk.js.map": "/zoo-game/static/js/2.c316ebb2.chunk.js.map",
     "index.html": "/zoo-game/index.html",
-    "precache-manifest.637ae70f07e3cae187ab068536e917e8.js": "/zoo-game/precache-manifest.637ae70f07e3cae187ab068536e917e8.js",
+    "precache-manifest.31379dfb73e21a29cfd7b57d9669e557.js": "/zoo-game/precache-manifest.31379dfb73e21a29cfd7b57d9669e557.js",
     "service-worker.js": "/zoo-game/service-worker.js",
-    "static/css/main.bb56c651.chunk.css.map": "/zoo-game/static/css/main.bb56c651.chunk.css.map",
-    "static/js/2.46d2e4bd.chunk.js.LICENSE.txt": "/zoo-game/static/js/2.46d2e4bd.chunk.js.LICENSE.txt",
+    "static/css/main.21647b7c.chunk.css.map": "/zoo-game/static/css/main.21647b7c.chunk.css.map",
+    "static/js/2.c316ebb2.chunk.js.LICENSE.txt": "/zoo-game/static/js/2.c316ebb2.chunk.js.LICENSE.txt",
     "static/media/main.css": "/zoo-game/static/media/bg.b06e3736.png",
     "static/media/card_back.png": "/zoo-game/static/media/card_back.521923bb.png",
+    "static/media/pause.png": "/zoo-game/static/media/pause.1f84b8b3.png",
+    "static/media/play.png": "/zoo-game/static/media/play.5b14e220.png",
     "static/media/zoo.mp3": "/zoo-game/static/media/zoo.f27b4497.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.7cd42693.js",
-    "static/js/2.46d2e4bd.chunk.js",
-    "static/css/main.bb56c651.chunk.css",
-    "static/js/main.2d9ef496.chunk.js"
+    "static/js/2.c316ebb2.chunk.js",
+    "static/css/main.21647b7c.chunk.css",
+    "static/js/main.144ace3f.chunk.js"
   ]
 }
