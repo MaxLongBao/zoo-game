@@ -6,11 +6,15 @@ const Navbar = (props) => {
     const { name, audio, handleAudio } = props;
     return (
         <div className='navbar'>
-            <div onClick={() => {handleAudio()}}>
-                <img src={audio} alt='volume control' className='audio' / >
+            <div>
+                <img src={audio} alt='volume control' className='audio' onClick={() => {handleAudio()}}/ >
             </div>
-            <div className='title'><h1>NIGHT ZOOKEEPER</h1></div>
-            <div className='name'><h1>Player: {name}</h1></div>
+            <div className='title'>
+                <h1>NIGHT ZOOKEEPER</h1>
+            </div>
+            <div className='name'>
+                <h1>Player: {name}</h1>
+            </div>
         </div>
     )
 }
